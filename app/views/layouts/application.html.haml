@@ -12,11 +12,12 @@
   %body
     %header.header
       .header-left 
-        %h2 Boards
+        = link_to 'Boards', root_path
       .header-right
         = image_tag 'Oval.png' , class: 'user-icon'
     %p.notice= notice
     %p.alert= alert
-    = yield
+    .container 
+      = yield
 
 
