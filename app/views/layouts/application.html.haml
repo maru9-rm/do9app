@@ -13,11 +13,15 @@
     %header.header
       .header-left 
         = link_to 'Boards', root_path
-      .header-right
-        = image_tag 'Oval.png' , class: 'user-icon'
-    %p.notice= notice
-    %p.alert= alert
-    .container 
+      - if user_signed_in?
+        .header-right.dropdown
+          = image_tag 'Oval.png', class: 'user-icon'
+          .dropdown-content
+            = link_to 'Profile', root_path, class: 'dropdown-content-item'
+            = link_to 'Sign out', destroy_user_session_path, data:{method: 'delete'} , class: 'dropdown-content-item'
+    .container
+      %p.notice= notice 
+      %p.alert= alert
       = yield
 
 

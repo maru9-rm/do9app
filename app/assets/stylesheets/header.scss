@@ -28,3 +28,37 @@
 .user-icon {
     width: 100%;
 }
+
+
+.dropdown {
+    position: relative;
+
+
+    &-content {
+        position: absolute;
+        top: 25px;
+        right: 0;
+        display: none;
+        border:1px solid grey;
+        border-radius: 5px;
+        background-color: white;
+        // box-shadow: rgba($color: #000000, $alpha: 0.5);
+        z-index: 800;
+        width: 100px;
+        padding: 5px;
+        
+
+        
+        }
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-wrap: wrap;
+
+    &-item {
+        width: 100%;
+        display: block;
+        text-align: center;
+        }
+}
