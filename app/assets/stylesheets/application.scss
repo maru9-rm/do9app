@@ -1,4 +1,6 @@
 @import 'header';
+@import 'button';
+
 
 body {
     margin: 0;
@@ -7,6 +9,12 @@ body {
 .container {
     width: 90%;
     margin: 0 auto;
+    font-family: Avenir;
+    font-style: normal;
 }
 
 
+a {
+    text-decoration: none;
+    color: black;
+}
