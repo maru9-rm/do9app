@@ -5,6 +5,6 @@ class AddUserIdToBoards < ActiveRecord::Migration[6.0]
       t.text :content
       t.timestamps
     end
-    add_reference :boards, :user
+    add_reference(:boards, :user)
   end
 end
