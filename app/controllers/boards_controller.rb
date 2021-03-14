@@ -29,7 +29,7 @@ class BoardsController < ApplicationController
 
     def create 
         @board = Board.new(board_params)
-        if @board.save!
+        if @board.save
             redirect_to root_path
         else
             render :new
