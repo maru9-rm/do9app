@@ -8,6 +8,19 @@ class BoardsController < ApplicationController
     end
 
 
+    def edit
+        @board = Board.find(params[:id])
+    end
+
+    def update
+        @board = Board.find(params[:id])
+        if @board.update(board_params)
+            redirect_to root_path
+        else
+            render :edit
+        end
+    end
+
 
     def new
         @board = Board.new
@@ -23,7 +36,11 @@ class BoardsController < ApplicationController
         end
     end
 
-
+    def destroy
+        board = Board.find(params[:id])
+        board.destroy
+        redirect_to root_path
+    end
 
     private
     def board_params

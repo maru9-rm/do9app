@@ -7,8 +7,8 @@
     .board-menu
       = image_tag 'Combined Shape' 
       .board-menu-content 
-        =link_to 'Edit', board_path(id: board.id) 
-        =link_to 'Delete', board_path(id: board.id) , data:{method: 'delete'}
+        =link_to 'Edit', edit_board_path(id: board.id) 
+        =link_to 'Delete', board_path(id: board.id) , data:{method: 'delete' , confirm: "destroy OK?"}
 
     .board-content 
       = board.content
