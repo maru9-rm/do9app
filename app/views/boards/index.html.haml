@@ -11,7 +11,7 @@
         =link_to 'Delete', board_path(id: board.id) , data:{method: 'delete' , confirm: "destroy OK?"}
 
     .board-content 
-      = board.content
+      = board.content.truncate(70)
     %br
 
     
