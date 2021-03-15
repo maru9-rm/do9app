@@ -1,4 +1,4 @@
-class AddUserIdToTasks < ActiveRecord::Migration[6.0]
+class AddBoardIdToTasks < ActiveRecord::Migration[6.0]
   def change
     create_table :tasks do |t|
       t.string :title
@@ -6,6 +6,6 @@ class AddUserIdToTasks < ActiveRecord::Migration[6.0]
       t.datetime :deadline
       t.timestamps
     end
-    add_reference(:tasks, :user)
+    add_reference(:tasks, :board)
   end
 end
