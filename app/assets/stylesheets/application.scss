@@ -2,6 +2,7 @@
 @import 'button';
 @import 'index';
 @import 'errors';
+@import 'task';
 
 body {
     margin: 0;
@@ -22,4 +23,9 @@ a {
 
 .notice {
     color: red;
+}
+
+
+img {
+    width: 100%;
 }

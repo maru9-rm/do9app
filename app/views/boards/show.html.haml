@@ -1,19 +1,15 @@
 %h2  
     = @board.title
--# - @tasks.each do |task|
--#     .board
--#     .board-title
--#         = task.title
--#     %br
--#     .board-menu
--#         = image_tag 'Combined Shape' 
--#         .board-menu-content 
--#         -# =link_to 'Edit', edit_board_path(id: board.id) 
--#         -# =link_to 'Delete', board_path(id: board.id) , data:{method: 'delete' , confirm: "destroy OK?"}
+- @tasks.each do |task|
+    .board.task
+        - if task.eyecatch.attached?
+            .task-image
+                = image_tag task.eyecatch
+        .board-title.task-content
+            = task.title
 
--#     .board-content 
--#         = task.content
--#     %br
+        .board-content.task-content
+            = task.content
 
     
 = link_to new_task_path do

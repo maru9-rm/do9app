@@ -1,0 +1,22 @@
+.task {
+    height: 300px;
+    padding: 0;
+
+
+}
+
+
+.task-image {
+    height: 160px;
+    position: relative;
+    overflow: hidden;
+
+    img {
+        border-radius: 10px;
+    }
+
+}
+
+.task-content {
+    margin-left: 20px;
+}
