@@ -1,8 +1,9 @@
 %h2 All Boards
 - @boards.each do |board|
   .board
-    .board-title
-      = board.title
+    = link_to board_path(id: board.id) do
+      .board-title
+        = board.title
     %br
     .board-menu
       = image_tag 'Combined Shape' 
