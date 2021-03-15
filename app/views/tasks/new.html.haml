@@ -4,6 +4,10 @@
         = message
 
 = form_with(model: @task, url: tasks_path, method: 'post', local: true) do |f|
+    .field 
+        = f.label :eyecatch, 'eyecatch'
+        %br/
+        = f.file_field 'eyecatch'
     .field
         = f.label :title, 'Name'
         %br/
