@@ -1,0 +1,21 @@
+%h2 New Task 
+- @task.errors.full_messages.each do |message|
+    %li.errors
+        = message
+
+= form_with(model: @task, url: tasks_path, method: 'post', local: true) do |f|
+    .field
+        = f.label :title, 'Name'
+        %br/
+        = f.text_field :title, class: 'form'
+    .field
+        = f.label :content, 'Description', class: 'text' 
+        %br
+        = f.text_area :content, class: 'form form-2'
+
+    .field
+        = f.label :content, 'Deadline', class: 'datetime' 
+        %br
+        = f.date_field :deadline, class: 'form'
+
+    = f.submit 'Submit' , class: 'form btn'
