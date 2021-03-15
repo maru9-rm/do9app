@@ -1,4 +1,21 @@
-%h2 show 
-= @board.title
-%br/
-= @board.content
+%h2  
+    = @board.title
+-# - @tasks.each do |task|
+-#     .board
+-#     .board-title
+-#         = task.title
+-#     %br
+-#     .board-menu
+-#         = image_tag 'Combined Shape' 
+-#         .board-menu-content 
+-#         -# =link_to 'Edit', edit_board_path(id: board.id) 
+-#         -# =link_to 'Delete', board_path(id: board.id) , data:{method: 'delete' , confirm: "destroy OK?"}
+
+-#     .board-content 
+-#         = task.content
+-#     %br
+
+    
+= link_to new_task_path do
+    .new-task 
+        %p + Add new task
