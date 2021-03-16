@@ -1,3 +1,12 @@
+.task-page-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-menu {
+    line-height: 71px;
+}
+
 .task {
     height: 300px;
     padding: 0;
@@ -6,17 +15,32 @@
 }
 
 
+
+
+
+
+.small-image {
+    width: 95%;
+    height: 95%;
+    margin: 0 auto;
+    position: relative;
+    top: 10px;
+}
+
 .task-image {
     height: 160px;
-    position: relative;
     overflow: hidden;
-
-    img {
-        border-radius: 10px;
-    }
-
+    border-radius: 10px;
 }
 
 .task-content {
     margin-left: 20px;
+}
+
+.comment {
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 36px;
 }

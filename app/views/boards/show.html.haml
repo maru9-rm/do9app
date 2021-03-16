@@ -3,7 +3,7 @@
 - @tasks.each do |task|
     .board.task
         - if task.eyecatch.attached?
-            .task-image
+            .task-image.small-image
                 = image_tag task.eyecatch
         .board-title.task-content
             = task.title
