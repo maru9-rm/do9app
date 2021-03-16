@@ -4,8 +4,36 @@
 }
 
 .task-menu {
-    line-height: 71px;
+    width: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &-content {
+        position: absolute;
+        display: none;
+        z-index: 999;
+        top: 60px;
+        right: 0px;
+        background-color: white;
+        border-radius: 10px;
+        text-align: center;
+
+        a {
+            padding: 5px 10px;
+            margin: 0 auto;
+            height: 20px;
+            line-height: 30px;
+        }
+
+    }
 }
+
+
+.task-menu:hover .task-menu-content {
+    display: block;
+    }
+
 
 .task {
     height: 300px;
