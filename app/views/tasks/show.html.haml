@@ -1,0 +1,26 @@
+.task-page-header
+    %h2  
+        = @task.title.truncate(30)
+    .task-menu
+        = image_tag 'Combined Shape'         
+    
+
+
+- if @task.eyecatch.attached?
+    .task-image
+        = image_tag @task.eyecatch
+
+
+.board.mt-35
+    .pt-20
+        = @task.content
+
+    
+%h2.comment
+    Comment
+
+= link_to new_task_path do
+    .new-task 
+        %p + Add new comment
+
+
