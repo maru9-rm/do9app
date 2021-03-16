@@ -1,15 +1,16 @@
 %h2  
     = @board.title
 - @tasks.each do |task|
-    .board.task
-        - if task.eyecatch.attached?
-            .task-image.small-image
-                = image_tag task.eyecatch
-        .board-title.task-content
-            = task.title
+    = link_to task_path(id: task.id) do
+        .board.task
+            - if task.eyecatch.attached?
+                .task-image.small-image
+                    = image_tag task.eyecatch
+            .board-title.task-content
+                = task.title
 
-        .board-content.task-content
-            = task.content
+            .board-content.task-content
+                = task.content
 
     
 = link_to new_task_path do

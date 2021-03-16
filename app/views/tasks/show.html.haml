@@ -3,12 +3,16 @@
         = @task.title.truncate(30)
     .task-menu
         = image_tag 'Combined Shape'         
+        .task-menu-content
+            =link_to 'Edit', edit_task_path(id: @task.id) 
+            =link_to 'Delete', task_path(id: @task.id) , data:{method: 'delete' , confirm: "destroy OK?"}
     
 
 
 - if @task.eyecatch.attached?
     .task-image
         = image_tag @task.eyecatch
+
 
 
 .board.mt-35

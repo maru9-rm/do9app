@@ -1,0 +1,17 @@
+%h2 Edit Task
+
+= form_with(model: @task, url: task_path(@task), method: 'put', local: true) do |f|
+    .field 
+        = f.label :eyecatch, 'Eyecatch'
+        %br/
+        = f.file_field :eyecatch, class: 'submit-eyecatch'
+    .field
+        = f.label :title, 'Name'
+        %br/
+        = f.text_field :title, class: 'form'
+    .field
+        = f.label :content, 'Description', class: 'text' 
+        %br
+        = f.text_area :content, class: 'form form-2'
+
+    = f.submit 'Submit' , class: 'form btn'
