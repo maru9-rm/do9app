@@ -23,7 +23,15 @@
 %h2.comment
     Comment
 
-= link_to new_task_path do
+- @comments.each do |comment|
+    .comment-wrapper 
+        .comment-user 
+            = image_tag 'Oval.png'
+        .comment-content
+            = comment.content
+
+
+= link_to new_comment_path do
     .new-task 
         %p + Add new comment
 

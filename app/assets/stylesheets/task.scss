@@ -72,3 +72,20 @@
     font-size: 26px;
     line-height: 36px;
 }
+
+.comment-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+.comment-user {
+    margin-right: 20px;
+    img {
+        width: 40px;
+    }
+}
+
+
+

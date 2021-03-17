@@ -1,0 +1,10 @@
+%h2 New Comment
+- @comment.errors.full_messages.each do |message|
+    %li.errors
+        = message
+
+= form_with(model: @comment, url: comments_path, method: 'post', local: true) do |f|
+    .field
+        = f.text_area :content, class: 'form form-2'
+
+    = f.submit 'Submit' , class: 'form btn'
