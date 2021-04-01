@@ -1,7 +1,8 @@
 class TasksController < ApplicationController
+    before_action :authenticate_user!
     def show
         @task = Task.find(params[:id])
-        @comments = Comment.all
+        @comments = current_task.comments.find(params[:id])
     end
 
     def new

@@ -26,7 +26,7 @@
 - @comments.each do |comment|
     .comment-wrapper 
         .comment-user 
-            = image_tag 'Oval.png'
+            = image_tag comment.user.avatar_image
         .comment-content
             = comment.content
 
