@@ -1,0 +1,12 @@
+= form_with(model: @profile, url: profile_path, method: 'put', lacal: true ) do |f|
+    %div
+        = f.label :nickname, 'name'
+    %div
+        = f.text_field :nickname, class: 'form'
+    %div
+        = f.label :avatar, 'アバター'
+    %div
+        = f.file_field :avatar
+
+    = f.submit 'Submit' , class: 'form btn'
+

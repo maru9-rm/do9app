@@ -5,4 +5,17 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :boards
   has_many :comments
+  has_one :profile
+
+
+  def avatar_image
+    if profile&.avatar&.attached?
+      profile.avatar
+    else
+      'Oval.png'
+    end
+  end
+  
+
+  
 end

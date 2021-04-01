@@ -15,9 +15,9 @@
         = link_to 'Boards', root_path
       - if user_signed_in?
         .header-right.dropdown
-          = image_tag 'Oval.png', class: 'user-icon'
+          = image_tag current_user.avatar_image, class: 'user-icon'
           .dropdown-content
-            = link_to 'Profile', root_path, class: 'dropdown-content-item'
+            = link_to 'Profile Edit', edit_profile_path, class: 'dropdown-content-item'
             = link_to 'Sign out', destroy_user_session_path, data:{method: 'delete'} , class: 'dropdown-content-item'
     .container
       %p.notice= notice 
